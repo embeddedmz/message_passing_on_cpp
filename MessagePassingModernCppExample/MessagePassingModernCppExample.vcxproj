@@ -140,10 +140,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MessagePassingModernCppExample.cpp" />
+    <ClCompile Include="observable\obs\connection.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlockingCollection.h" />
     <ClInclude Include="cpptime.h" />
+    <ClInclude Include="observable\obs.h" />
+    <ClInclude Include="observable\obs\connection.h" />
+    <ClInclude Include="observable\obs\observable.h" />
+    <ClInclude Include="observable\obs\observers.h" />
+    <ClInclude Include="observable\obs\safe_list.h" />
+    <ClInclude Include="observable\obs\signal.h" />
+    <ClInclude Include="observable\obs\slot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

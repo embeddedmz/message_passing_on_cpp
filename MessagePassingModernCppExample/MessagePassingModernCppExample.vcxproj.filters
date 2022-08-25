@@ -13,9 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers sources\observable">
+      <UniqueIdentifier>{171e66f0-20b3-4933-b55d-7254c7f552a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\observable">
+      <UniqueIdentifier>{83c70bce-6aac-46c2-8e37-03dc99137026}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MessagePassingModernCppExample.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="observable\obs\connection.cpp">
+      <Filter>Fichiers sources\observable</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -25,6 +37,27 @@
     </ClInclude>
     <ClInclude Include="cpptime.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="observable\obs.h">
+      <Filter>Fichiers d%27en-tête\observable</Filter>
+    </ClInclude>
+    <ClInclude Include="observable\obs\connection.h">
+      <Filter>Fichiers d%27en-tête\observable</Filter>
+    </ClInclude>
+    <ClInclude Include="observable\obs\observable.h">
+      <Filter>Fichiers d%27en-tête\observable</Filter>
+    </ClInclude>
+    <ClInclude Include="observable\obs\observers.h">
+      <Filter>Fichiers d%27en-tête\observable</Filter>
+    </ClInclude>
+    <ClInclude Include="observable\obs\safe_list.h">
+      <Filter>Fichiers d%27en-tête\observable</Filter>
+    </ClInclude>
+    <ClInclude Include="observable\obs\signal.h">
+      <Filter>Fichiers d%27en-tête\observable</Filter>
+    </ClInclude>
+    <ClInclude Include="observable\obs\slot.h">
+      <Filter>Fichiers d%27en-tête\observable</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
