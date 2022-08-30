@@ -1836,7 +1836,6 @@ namespace code_machina {
     PriorityContainer<T, PriorityComparer<T>>>;
 
 #ifdef _WIN32
-#include <Windows.h>
     /// @class WIN32_CRITICAL_SECTION
     /// WIN32_CRITICAL_SECTION wraps the Win32 CRITICAL_SECTION object so that
     /// it meets the BasicLockable requirement (i.e. lock and unlock member

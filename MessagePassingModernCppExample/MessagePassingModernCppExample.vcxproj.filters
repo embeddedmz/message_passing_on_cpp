@@ -27,7 +27,7 @@
     <ClCompile Include="observable\obs\connection.cpp">
       <Filter>Fichiers sources\observable</Filter>
     </ClCompile>
-    <ClCompile Include="ResourceManager.cpp">
+    <ClCompile Include="ResourceManager.h">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
