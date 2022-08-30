@@ -174,7 +174,7 @@ int main()
         });
         std::string res = currentTaskFuture.get();
 
-        printf("[Thread %u] Task result = %s\n", mainThreadId, res.c_str());
+        printf("[Thread %zu] Task result = %s\n", mainThreadId, res.c_str());
 
         std::this_thread::sleep_for(std::chrono::milliseconds(250));
     };
