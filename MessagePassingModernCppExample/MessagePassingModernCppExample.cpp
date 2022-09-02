@@ -1,4 +1,9 @@
+#ifdef WIN32
 #include <windows.h>
+#else
+#include <signal.h>
+#include <unistd.h>
+#endif
 
 #include <atomic>
 #include <chrono>
@@ -47,6 +52,7 @@ std::future<void> Enqueue(code_machina::BlockingCollection<std::function<void(Re
     return fut;
 }
 
+#ifdef WIN32
 BOOL WINAPI consoleHandler(DWORD signal) {
 
     if (signal == CTRL_C_EVENT)
@@ -56,14 +62,24 @@ BOOL WINAPI consoleHandler(DWORD signal) {
 
     return TRUE;
 }
+#else
+void consoleHandler(int)
+{
+    g_quit = true;
+}
+#endif
 
 int main()
 {
+#ifdef WIN32
     if (!SetConsoleCtrlHandler(consoleHandler, TRUE))
     {
         printf("\nERROR: Could not set control handler\n");
         return 1;
     }
+#else
+    signal (SIGINT, consoleHandler);
+#endif
 
     std::random_device dev;
     std::mt19937 rng(dev());
